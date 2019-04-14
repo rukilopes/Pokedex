@@ -3,7 +3,9 @@ package com.example.teste.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public abstract class Pokemon {
+import java.util.List;
+
+public class Pokemon {
 
     @SerializedName("id")
     @Expose
@@ -42,8 +44,11 @@ public abstract class Pokemon {
     }
 
 
+    public String caracteristicas(List<Pokemon> pok) {
+        Pokemon pokAux = new Pokemon();
 
+        return String.format("ID: %s\nNome: %s\nUrl: %s\n\n",pokAux.getId(),
+                pokAux.getNome(), pokAux.getUrl());
 
-
-
+    }
 }

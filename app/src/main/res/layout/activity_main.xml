@@ -9,12 +9,14 @@
 
     <TextView
         android:id="@+id/titulo"
-        android:layout_width="191dp"
+        android:layout_width="215dp"
         android:layout_height="69dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Pokedex"
+        android:layout_marginBottom="280dp"
+        android:text="@string/pokedex"
+        android:textAlignment="center"
         android:textColor="@color/colorAccent"
         android:textColorLink="@color/colorAccent"
         android:textSize="50sp"
@@ -23,22 +25,25 @@
         android:translationY="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pokebola"
-        app:layout_constraintVertical_bias="0.08" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.75" />
 
     <ImageView
-        android:id="@+id/pokebola"
-        android:layout_width="162dp"
-        android:layout_height="179dp"
+        android:id="@+id/imageView"
+        android:layout_width="206dp"
+        android:layout_height="153dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:visibility="visible"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:background="@mipmap/pokebola"
-        tools:srcCompat="@drawable/ic_ball" />
+        app:layout_constraintVertical_bias="0.179"
+        app:srcCompat="@mipmap/pokebola" />
 
 </android.support.constraint.ConstraintLayout>

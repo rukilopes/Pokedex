@@ -1,21 +1,22 @@
 package com.example.teste;
-
 import android.util.Log;
-
-import com.example.teste.models.Pokemon;
-
+import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Retrofit2 {
 
-    public void retrofitConverte() {
+    private final Retrofit retrofit;
+
+    public Retrofit2() {
 
         final String TAG = "pokedex";
+        final String dados = "";
 
-        retrofit2.Retrofit retrofit = new retrofit2.Retrofit.Builder()
+        retrofit = new retrofit2.Retrofit.Builder()
                 .baseUrl(APIService.urlPokedex)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
@@ -31,10 +32,10 @@ public class Retrofit2 {
                 } else {
                     Lista_pokedex pokemon = response.body();
 
-                    for (Pokemon p : pokemon.pokemon){
-                        Log.i(TAG,String.format("ID: %s  |  Nome: %s   |  Url: %s",(String)p.getId()
-                                ,p.getNome(),p.getUrl()));
-                    }
+                    call = new Retrofit2().retrofit.create(APIService.class)
+                            .listaPokemon();
+
+                    System.out.println(call.request());
                 }
             }
 
