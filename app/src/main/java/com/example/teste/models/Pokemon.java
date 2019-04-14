@@ -3,7 +3,7 @@ package com.example.teste.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Pokemon {
+public abstract class Pokemon {
 
     @SerializedName("id")
     @Expose
